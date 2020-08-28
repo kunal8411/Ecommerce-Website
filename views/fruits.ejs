@@ -1,0 +1,70 @@
+
+
+<%- include('_layouts/header') -%>
+
+<link rel="stylesheet" href="/css/allcategories.css">
+
+
+<h1>Fruits</h1>
+<div class="row products">
+
+
+    
+   
+    <% allproducts.forEach(function(products){ %>
+    <div class="col-xs-12 col-md-4 p">
+        <a class="pa" href="#">
+            <img class="pimage" src="/pictures/<%= products.image%>" alt="hello">
+        </a>
+        <h3><%= products.name%></h3>
+        
+        <h4>Price:-<%= products.price%>rs</h4>
+        <a class="vd" href="#">Add to cart</a>
+    </div>
+
+    <% }) %>
+  
+    <!-- <div class="col-xs-12 col-md-4 p">
+        <a class="pa" href="#">
+            <img class="pimage" src="/pictures/banana.jpg" alt="hello">
+        </a>
+        <h3>Banana</h3>
+        <h4>Price:-50rs</h4>
+        <a class="vd" href="#">Add to cart</a>
+    </div> -->
+
+    <!-- <div class="col-xs-12 col-md-4 p">
+        <a class="pa" href="#">
+            <img class="pimage" src="/pictures/grapes.jpg" alt="hello">
+        </a>
+        <h3>Grapes</h3>
+        <h4>Price:-70rs</h4>
+        <a class="vd" href="#">Add to cart</a>
+    </div> -->
+
+    <!-- <div class="col-xs-12 col-md-4 p">
+        <a class="pa" href="#">
+            <img class="pimage" src="/pictures/pineapple.jpg" alt="hello">
+        </a>
+        <h3>Pineapple</h3>
+        <h4>Price:-100rs</h4>
+        <a class="vd" href="#">Add to cart</a>
+    </div> -->
+
+    <!-- <div class="col-xs-12 col-md-4 p">
+        <a class="pa" href="#">
+            <img class="pimage" src="/pictures/watermelon.jpg" alt="hello">
+        </a>
+        <h3>Watermelon</h3>
+        <h4>Price:-120rs</h4>
+        <a class="vd" href="#">Add to cart</a>
+    </div> -->
+
+    
+
+    
+</div>
+
+
+
+<%- include('_layouts/footer') -%>
