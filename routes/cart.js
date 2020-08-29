@@ -9,6 +9,7 @@ const cart_controller= require('../controller/cart-controller');
 
 router.get('/checkout',cart_controller.checkout);
 
+router.get('/buynow',cart_controller.buynow);
 
 
 

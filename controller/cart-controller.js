@@ -34,3 +34,7 @@ module.exports.update= function(req,res){
 module.exports.checkout= function(req,res){
     return res.render('../views/cart');
 }
+
+module.exports.buynow = function(req,res){
+    return res.render('../views/checkout')
+}
