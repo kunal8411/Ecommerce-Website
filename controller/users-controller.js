@@ -1,4 +1,12 @@
 const User= require('../models/user');
+const router = require('../routes/biscuits');
+
+
+//contact-us page 
+module.exports.contactus= function(req,res){
+    return res.render('../views/contactus')
+}
+
 
 
 //for login post request 

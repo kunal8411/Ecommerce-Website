@@ -9,7 +9,7 @@ const passport= require('passport');
 const router= express.Router();
 const user_controller= require('../controller/users-controller')  ;
 
-
+router.get('/contact',user_controller.contactus);
 router.get('/login', user_controller.login);
 
 router.get('/register', user_controller.signup);

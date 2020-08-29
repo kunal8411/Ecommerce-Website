@@ -30,6 +30,7 @@ addtocart.forEach((btn) =>{
         // console.log(products);
 
         let products= JSON.parse(btn.dataset.products);
+        console.log(products);
         updateCart(products)
 
     })

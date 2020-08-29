@@ -1,0 +1,40 @@
+
+
+<%- include('_layouts/header') -%>
+
+<link rel="stylesheet" href="/css/allcategories.css">
+
+
+<h1>Biscuits</h1>
+<div class="row products">
+
+
+    
+   
+    <% biscuits.forEach(function(products){ %>
+    <div class="col-xs-12 col-md-4 p">
+        <a class="pa" href="#">
+            <img class="pimage" src="/pictures/<%= products.image%>" alt="hello">
+        </a>
+        <h3><%= products.name%></h3>
+        
+        <h4>Price:-<%= products.price%>rs</h4>
+       
+        <button data-products="<%= JSON.stringify(products)%>" class="add-to-cart"><span>Add to cart</span><span>+</span></button>
+
+
+        <!-- data-products="products" ====> this is our object -->
+        <!-- we need to convert this to string so use json for that and at client side make that as object again -->
+         <!-- <a class="vd " href="#"> -->
+        <!-- </a> -->
+    </div>
+
+    <% }) %>
+     
+</div>
+
+<script src="/js/fruits.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+
+<%- include('_layouts/footer') -%>
