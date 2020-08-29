@@ -12,7 +12,13 @@ a.pa{
     margin-top: 20px;
     margin-bottom: 20px; 
 }
+img.cpi{
+     width: 100px;
+}
 
+table.alignmiddle td{
+    vertical-align: middle !important;
+}
 /* .p{
     border: 2px solid rebeccapurple;
 } */

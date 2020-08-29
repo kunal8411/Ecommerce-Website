@@ -1,0 +1,44 @@
+<%- include('_layouts/header') -%>
+
+<link rel="stylesheet" href="/css/allcategories.css">
+
+<h1 class="page-title">My Cart</h1>
+<br>
+<br>
+<% if(session.cart){ %>
+<table class="table table-striped alignmiddle">
+    <tr>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+    </tr>
+
+    <!-- use floop here  -->
+    <% for(let products of Object.values(session.cart.items)){%>
+    <tr>
+        <td><img class="cpi" src="/pictures/<%= products.items.image%>" alt=""></td>
+        <td><%= products.items.name%></td>
+        <td><%= products.items.price%></td>
+        <td><%= products.qty%></td>
+        <td>₹<%= products.items.price * products.qty%></td>
+    </tr>
+    <% } %>
+
+    <tr>
+        <td colspan="6" align="right"> <b>Total:</b>₹<%= session.cart.totalPrice%></td>
+    </tr>
+
+    <tr >
+        <td colspan="5" align="right">
+            <a class="btn btn-primary" href="#">Buy Now</a>
+        </td>
+    </tr>
+</table>
+<%}else{%>
+    <h1>No items in cart to show </h1>
+    <h1>Go and shop to see ur cart </h1>
+
+<% } %>    
+<%- include('_layouts/footer') -%>

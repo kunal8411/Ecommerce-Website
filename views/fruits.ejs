@@ -19,52 +19,22 @@
         <h3><%= products.name%></h3>
         
         <h4>Price:-<%= products.price%>rs</h4>
-        <a class="vd" href="#">Add to cart</a>
+       
+        <button data-products="<%= JSON.stringify(products)%>" class="add-to-cart"><span>Add to cart</span><span>+</span></button>
+
+
+        <!-- data-products="products" ====> this is our object -->
+        <!-- we need to convert this to string so use json for that and at client side make that as object again -->
+         <!-- <a class="vd " href="#"> -->
+        <!-- </a> -->
     </div>
 
     <% }) %>
-  
-    <!-- <div class="col-xs-12 col-md-4 p">
-        <a class="pa" href="#">
-            <img class="pimage" src="/pictures/banana.jpg" alt="hello">
-        </a>
-        <h3>Banana</h3>
-        <h4>Price:-50rs</h4>
-        <a class="vd" href="#">Add to cart</a>
-    </div> -->
-
-    <!-- <div class="col-xs-12 col-md-4 p">
-        <a class="pa" href="#">
-            <img class="pimage" src="/pictures/grapes.jpg" alt="hello">
-        </a>
-        <h3>Grapes</h3>
-        <h4>Price:-70rs</h4>
-        <a class="vd" href="#">Add to cart</a>
-    </div> -->
-
-    <!-- <div class="col-xs-12 col-md-4 p">
-        <a class="pa" href="#">
-            <img class="pimage" src="/pictures/pineapple.jpg" alt="hello">
-        </a>
-        <h3>Pineapple</h3>
-        <h4>Price:-100rs</h4>
-        <a class="vd" href="#">Add to cart</a>
-    </div> -->
-
-    <!-- <div class="col-xs-12 col-md-4 p">
-        <a class="pa" href="#">
-            <img class="pimage" src="/pictures/watermelon.jpg" alt="hello">
-        </a>
-        <h3>Watermelon</h3>
-        <h4>Price:-120rs</h4>
-        <a class="vd" href="#">Add to cart</a>
-    </div> -->
-
-    
-
-    
+     
 </div>
 
+<script src="/js/fruits.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 
 <%- include('_layouts/footer') -%>

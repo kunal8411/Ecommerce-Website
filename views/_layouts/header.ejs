@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </head>
 
@@ -41,8 +42,20 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="/cart/checkout">My Cart 
+                            <!-- <a  href="/cart/checkout">My Cart(<span id="cartCounter">
+                                <%= session.cart ? session.cart.totalQty : (0) %> -->
+
+                                <!-- by default we will not get session var at front end so we need to put a midddleware in index.js -->
+                           <!-- </span>)
                                 
+                                
+                            </a> -->
+
+                            <a href="/cart/checkout">
+                                <i class="fa fa-shopping-cart" area-hidden="true"></i>My cart(
+                                    <span id="cartCounter"> <%= session.cart ? session.cart.totalQty : (0) %></span>
+                                )
+
                             </a>
                         </li>
                         
@@ -87,3 +100,4 @@
                 
 
 
+                    

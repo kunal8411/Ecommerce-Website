@@ -6,17 +6,14 @@ const router= express.Router();
 const Product= require('../models/products');
 
 const controller =require('../controller/home_controller');
-
 const fruits_controller= require('../controller/fruits_controller');
+const cart_controller= require('../controller/cart-controller');
 
-const test_controller= require('../controller/test_controller');
+router.post('/update-cart',cart_controller.update);
 
 
 router.get('/view',fruits_controller.fruits);
 
-router.get('/test',test_controller.test);
 
-//some action here
-router.post('/test1' , test_controller.check);
 
 module.exports=router;
