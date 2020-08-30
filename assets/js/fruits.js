@@ -16,9 +16,22 @@ function updateCart(products){
         
         // res.flash('success','successfull added to cart')
         cartCounter.innerHTML= res.data.totalQty;
+        new Noty({
+            type: 'success',
+            timeout:1000,
+            progressBar:false, 
+            text:'Item added to cart'
+        }).show();
+
     })
     .catch(function (error) {
         console.log(error);
+        new Noty({
+            type: 'error',
+            timeout:1000,
+            progressBar:false, 
+            text:'Something went wrong'
+        }).show();
       });
 }
 

@@ -11,10 +11,10 @@ module.exports.contactus= function(req,res){
 
 //for login post request 
 module.exports.createSession= function(req,res){
-
+   
    
     return res.redirect('/'); 
-     
+    
 }
 
 //for post sign-in method
@@ -61,4 +61,9 @@ module.exports.login= function(req,res){
 //for signup get method 
 module.exports.signup= function(req,res){
     return res.render('../views/signup');
+}
+
+
+module.exports.thanks= function(req,res){
+    return res.render('../views/thanks');
 }

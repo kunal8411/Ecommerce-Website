@@ -14,6 +14,8 @@ router.get('/login', user_controller.login);
 
 router.get('/register', user_controller.signup);
 
+router.get('/thanks', user_controller.thanks);
+
   
 //for sign in 
 router.post('/create' ,user_controller.create );

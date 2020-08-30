@@ -11,6 +11,7 @@ const session= require('express-session');
 const MongoStore= require('connect-mongo')(session);
 const db = require('./config/mongoose');
 const Product= require('./models/products');
+const customMware= require('./config/middleware');
 
 
 
@@ -36,7 +37,7 @@ app.use(session({
         )
 }));
 
-app.use(flash());
+
 app.use(express.static('./assets'));
 app.use(express.json());
 
@@ -57,6 +58,10 @@ app.set('view engine','ejs');
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticateduser);
+app.use(flash());
+app.use(customMware.setFlash);  
+
+
 app.use('/',require('./routes/index'));
 
 
