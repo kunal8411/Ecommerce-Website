@@ -66,7 +66,7 @@ app.use('/',require('./routes/index'));
 
 
 
-app.listen(port,function(err){
+app.listen(port, "0.0.0.0",function(err){
     if(err){
         console.log('server will not run on this port:',port );
 
