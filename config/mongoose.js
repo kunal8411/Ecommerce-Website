@@ -2,7 +2,7 @@ const mongoose= require('mongoose');
 
 
 // create a database having name Learning 
-mongoose.connect('mongodb://kunal:kunal@11th@ds157829.mlab.com:57829/learninig');
+mongoose.connect('mongodb://localhost/learning');
 
 
 
