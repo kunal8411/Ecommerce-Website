@@ -1,5 +1,6 @@
 const express= require('express');
 const port =8080;
+const HOST = '0.0.0.0';
 const app=express();
 const path= require('path');
 app.use(express.urlencoded());
@@ -12,6 +13,7 @@ const MongoStore= require('connect-mongo')(session);
 const db = require('./config/mongoose');
 const Product= require('./models/products');
 const customMware= require('./config/middleware');
+const http = require('http');
 
 
 
@@ -66,7 +68,7 @@ app.use('/',require('./routes/index'));
 
 
 
-app.listen(port, "0.0.0.0",function(err){
+app.listen( port, HOST ,function(err){
     if(err){
         console.log('server will not run on this port:',port );
 
