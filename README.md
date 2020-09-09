@@ -1,4 +1,4 @@
-# My-Grocery-store
+# Store to Source
 A online Grocery Store is an eCommerce based web application, where you can order daily essentials like milk and eggs, fruits, vegetables and groceries. in which user can find necessary information about any grocery item, if user want to buy any item then he/she can save this in cart, can proceed to checkout to buy products. User can create an account, when user will order the items he/she will receive an mail regarding order status. 
 
 # GitHub Repository
